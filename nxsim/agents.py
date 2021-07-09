@@ -91,7 +91,7 @@ class BaseAgent(object):
 
     def get_agent(self, agent_id):
         """Returns agent with the specified id"""
-        return self.global_topology.node[agent_id]['agent']
+        return self.global_topology.nodes[agent_id]['agent']
 
     def remove_node(self, agent_id):
         """Remove specified node from the network
