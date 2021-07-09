@@ -16,7 +16,7 @@ def create_copy_without_data(G):
     """Return a copy of the graph G with all the data removed"""
     H = nx.Graph()
     for i in H.nodes_iter():
-        H.node[i] = {}
+        H.nodes[i] = {}
     return H
 
 # Storing and retrieving objects
