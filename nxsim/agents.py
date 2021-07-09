@@ -72,10 +72,10 @@ class BaseAgent(object):
             agents = self.get_all_nodes()
 
         if state_id is None:
-            return [self.global_topology.node[_]['agent'] for _ in agents]  # return all regardless of state
+            return [self.global_topology.nodes[_]['agent'] for _ in agents]  # return all regardless of state
         else:
-            return [self.global_topology.node[_]['agent'] for _ in agents
-                    if self.global_topology.node[_]['agent'].state['id'] == state_id]
+            return [self.global_topology.nodes[_]['agent'] for _ in agents
+                    if self.global_topology.nodes[_]['agent'].state['id'] == state_id]
 
     def get_all_agents(self, state_id=None):
         """Returns list of agents based only on their state"""
