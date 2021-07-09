@@ -87,5 +87,5 @@ class NetworkSimulation(object):
     def setup_network_agents(self):
         """Initializes agents on nodes of graph and registers them to the SimPy environment"""
         for i in self.env.G.nodes():
-            self.env.G.node[i]['agent'] = self.agent_type(environment=self.env, agent_id=i,
+            self.env.G.nodes[i]['agent'] = self.agent_type(environment=self.env, agent_id=i,
                                                           state=deepcopy(self.initial_states[i]))
